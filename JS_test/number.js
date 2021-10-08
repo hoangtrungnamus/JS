@@ -27,5 +27,5 @@ console.log(person)
 let copy = Object.assign({}, person)
 
 console.log(copy[0].conutry())
-
+console.log("akdksakd");
 
