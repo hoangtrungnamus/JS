@@ -29,4 +29,3 @@ let copy = Object.assign({}, person)
 console.log(copy[0].conutry())
 console.log("ahađasadas")
 
-
