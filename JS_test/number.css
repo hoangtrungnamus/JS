@@ -1,0 +1,19 @@
+
+
+
+#frame{
+    
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    line-height: 10vh;
+    border-radius: 50%;
+}
+
+.red{
+    background-color: red;
+}
+
+.black{
+    background-color: black;
+}
