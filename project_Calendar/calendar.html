@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MY CALENDAR</title>
+        <link rel="stylesheet" href="calendar.css">
+        <script src="calendar.js"></script>
+    </head>
+    <body onload="loadData()">
+        <div class="frame">
+            <button class="btn btnLM"><<</button>
+            <button class="btn btnNM">>></button>
+            <button class="btn btnLast"> < </button>
+            <select name="year" id="year" onchange="checkYear()">
+                <option value="1">Select Year</option>
+            </select>
+            <button class="btn btnNext">></button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tues</th>
+                        <th>Wed</th>
+                        <th>Third</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody id="day1">
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
