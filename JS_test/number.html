@@ -4,15 +4,28 @@
     <head>
         <title>alo</title>
         <link rel="stylesheet" href="number.css">
-        <script type="text/javascript" src="number.js"></script>
 
     </head>
     <body>
-        <h1 id="test"></h1>
         <div id="frame"></div>
-        <button onclick="setRed();">Red</button>
+        <button id="btn" onclick="setRed();">Red</button>
         <button onclick="setBlack();">Black</button>
         <button onclick="setColor();">Reset</button>
+        <br>
+        <br>
+        <form method="get" name="myform">
+            <textarea id="fnamei" cols="30"></textarea>
+            
+        </form>
+        <button onclick="loadDoc()">Oke</button>
+        <br>
+        <br>
+        <div id="test">
+
+        </div>
+        <div id="width"></div>
+        <div id="height"></div>
     </body>
+        <script type="text/javascript" src="number.js"></script>
 
 </html>
