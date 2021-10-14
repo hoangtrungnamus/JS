@@ -14,11 +14,11 @@ let person = [
 
 
 
-const names = [ 'Sơn', 'Quốc', 'Linh', 'Nam', 'My'];
+const names = ['Sơn', 'Quốc', 'Linh', 'Nam', 'My'];
 
 //--------------------------------------------------------------------------------------------------------------------------------//
 
-person[0].conutry = function(){
+person[0].conutry = function () {
     return "Việt Nam";
 }
 
@@ -29,16 +29,16 @@ console.log(carobj.name)
 
 console.log(Infinity)
 
-function Display(some){
+function Display(some) {
     console.log(some)
 }
 
-function Cal(a,b, myCallback){
+function Cal(a, b, myCallback) {
     let s = a + b;
     myCallback(s);
 }
 
-Cal(5,5,Display);
+Cal(5, 5, Display);
 
 
 // function myClock(){
@@ -51,25 +51,25 @@ Cal(5,5,Display);
 
 // setInterval(myClock, 1000);
 
-function setRed(){
+function setRed() {
     let circle = document.getElementById("frame").style.backgroundColor = "red";
 }
 
-function setBlack(){
+function setBlack() {
     let circle = document.getElementById("frame").style.backgroundColor = "black";
 }
 
-function setColor(){
+function setColor() {
     let circle = document.getElementById("frame").style.backgroundColor = "blue";
 }
 
-function checkValidate(){
+function checkValidate() {
     let x = document.forms["myform"]["fname"].value;
-    if(x == ""){
+    if (x == "") {
         alert("Alo");
         return false;
     }
-    else{
+    else {
         return true;
     }
 }
@@ -82,7 +82,7 @@ console.log("windowHeight: " + window.innerHeight);
 console.log("screenWidth: " + screen.width);
 console.log("screenHeigh: " + screen.height);
 
-window.addEventListener("resize", function(){
+window.addEventListener("resize", function () {
     this.document.getElementById("width").innerHTML = window.innerWidth;
     this.document.getElementById("height").innerHTML = window.innerHeight;
 })
@@ -100,16 +100,15 @@ window.addEventListener("resize", function(){
 
 function loadDoc() {
     const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-      let x = this.responseText;
-      let y = JSON.parse(x);
-      let z = y['items'][2];
-      let m = z['id'];
-      document.getElementById("fnamei").value = m;
-      document.getElementById("fnamei").style.height = "300px";
+    xhttp.onload = function () {
+        let x = this.responseText;
+        let y = JSON.parse(x);
+        let z = y['items'][2];
+        let m = z['id'];
+        document.getElementById("fnamei").value = m;
+        document.getElementById("fnamei").style.height = "300px";
 
     }
     xhttp.open("GET", "demoAjax.txt");
     xhttp.send();
-  }
-
+}
