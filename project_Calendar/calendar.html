@@ -8,13 +8,15 @@
     </head>
     <body onload="loadData()">
         <div class="frame">
-            <button class="btn btnLM"><<</button>
-            <button class="btn btnNM">>></button>
-            <button class="btn btnLast"> < </button>
-            <select name="year" id="year" onchange="checkYear()">
+            <select name="year" id="day">
+                <option value="1">Select Date</option>
+            </select>
+            <select name="year" id="month" onchange="setDate()">
+                <option value="1">Select Month</option>
+            </select>
+            <select name="year" id="year" onchange="setDate()">
                 <option value="1">Select Year</option>
             </select>
-            <button class="btn btnNext">></button>
             <table>
                 <thead>
                     <tr>
@@ -27,14 +29,12 @@
                         <th>Sun</th>
                     </tr>
                 </thead>
-                <tbody id="day1">
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                <tbody id="days">
+                    <tr id="r1"></tr>
+                    <tr id="r2"></tr>
+                    <tr id="r3"></tr>
+                    <tr id="r4"></tr>
+                    <tr id="r5"></tr>
                 </tbody>
             </table>
         </div>

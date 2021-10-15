@@ -12,7 +12,7 @@ body{
     border-radius: 20px;
     background-color: turquoise;
     width: 500px;
-    height: 500px;
+    height: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top: 50%;
     left: 50%;
@@ -20,28 +20,10 @@ body{
     position: absolute;
 }
 
-.btn{
-    text-align: center;
-    font-size: large;
-    width: 100px;
-    height: 30px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: yellow;
-    position: absolute;
-}
 
-.btnLast{
-    left: 10%;
-}
 
-.btnNext{
-    left: 90%;
-    transform: translate(-100%,0%);
-}
-
-#year{
-    width: 100px;
+#year, #month, #day{
+    width: 150px;
     text-align: center;
     overflow: scroll;
     position: absolute;
@@ -50,14 +32,27 @@ body{
     border: none;
     outline: none;
     border-radius: 5px;
+}
+
+#month{
     left: 50%;
     transform: translate(-50%);
+}
+
+#year{
+    right: 10%;
+    transform: translate(20%);
+}
+
+#day{
+    left: 10%;
+    transform: translate(-20%);
 }
 
 table{
     position: absolute;
     left: 5%;
-    top: 10%;
+    top: 20%;
 }
 
 th, tr, td{
@@ -85,13 +80,3 @@ button:hover{
     background-color: yellow;
 }
 
-.btnLM, .btnNM{
-    width: 30px;
-    top: 50%;
-    transform: translate(0,-50%);
-}
-
-.btnNM{
-    left: 100%;
-    transform: translate(-100%, -50%);
-}
