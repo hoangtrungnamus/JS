@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MY CALENDAR</title>
+        <link rel="stylesheet" href="calendar.css">
+        <script src="calendar.js"></script>
+    </head>
+    <body onload="loadData()">
+        <div class="frame">
+            <div class="decoratel"></div>
+            <div class="decorater"></div>
+            <div class="decoratebl"></div>
+            <div class="decoratebr"></div>
+            <select name="year" id="month" onchange="setDate()">
+            </select>
+            <select name="year" id="year" onchange="setDate()">
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tues</th>
+                        <th>Wed</th>
+                        <th>Third</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody id="days">
+                    <tr id="r1"></tr>
+                    <tr id="r2"></tr>
+                    <tr id="r3"></tr>
+                    <tr id="r4"></tr>
+                    <tr id="r5"></tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
