@@ -6,29 +6,26 @@ let y = today.getFullYear();
 
 
 function loadData() {
-
-    for (let i = y - 100; i < y + 100; i++) {
-        let node = document.createElement("option");
-        let textNode = document.createTextNode(i + "");
-        node.appendChild(textNode);
-        document.getElementById("year").appendChild(node);
+    addNode("option", y + "", "year");
+    addNode("option", m + 1 + "", "month");
+    for (let i = y - 100; i <= y + 100; i++) {
+        addNode("option", i + "", "year");
     }
 
     for (let i = 0; i < 12; i++) {
-        let node = document.createElement("option");
-        let textNode = document.createTextNode(i + 1 + "");
-        node.appendChild(textNode);
-        document.getElementById("month").appendChild(node);
+        addNode("option", i + 1 + "", "month");
     }
 
-    let temp = new Date(y, m + 1, 0).getDate();
-    for (let i = 1; i <= temp; i++) {
-        let node = document.createElement("option");
-        let textNode = document.createTextNode(i + "");
-        node.appendChild(textNode);
-        document.getElementById("day").appendChild(node);
-    }
+    let lastDay = new Date(y, m + 1, 0).getDate();
+    display(lastDay)
 
+}
+
+function addNode(tag, nodeValue, idParents){
+    let node = document.createElement(tag);
+    let textNode = document.createTextNode(nodeValue);
+    node.appendChild(textNode);
+    document.getElementById(idParents).appendChild(node);
 }
 
 function setDate() {
@@ -48,30 +45,14 @@ function setDate() {
         tempy = Number(tempy);
     }
 
-    let tempd = document.getElementById("day");
     let lastDay = new Date(tempy, tempm, 0).getDate();
-    if (tempd.hasChildNodes()) {
-        document.getElementById("day").innerHTML = "";
-        let node = document.createElement("option");
-        let textNode = document.createTextNode("Select Date");
-        node.appendChild(textNode);
-        document.getElementById("day").appendChild(node);
-        for (let i = 1; i <= lastDay; i++) {
-            let node = document.createElement("option");
-            let textNode = document.createTextNode(i + "");
-            node.appendChild(textNode);
-            document.getElementById("day").appendChild(node);
+    for (let i = 1; i <= 5; i++) {
+        let x = document.getElementById("r" + i);
+        if (x.hasChildNodes()) {
+            x.innerHTML = "";
         }
-        for (let i = 1; i <= 5; i++) {
-            let x = document.getElementById("r" + i);
-            if (x.hasChildNodes()) {
-                x.innerHTML = "";
-            }
-        }
-        display(lastDay);
-
     }
-
+    display(lastDay);
 }
 
 function display(lastDay) {
@@ -79,10 +60,7 @@ function display(lastDay) {
     for (let i = 1; i <= 5; i++) {
         let x = document.getElementById("r" + i);
         for (let j = 0; j < 7; j++) {
-            let nodeDay = document.createElement("td");
-            let textDay = document.createTextNode(showDate + "");
-            nodeDay.appendChild(textDay);
-            x.appendChild(nodeDay);
+            addNode("td", showDate +"", "r" + i);
             showDate++;
             if (showDate > lastDay) {
                 break;
